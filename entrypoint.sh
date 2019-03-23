@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+args="."
 if [[ $# -ne 0 ]]; then
-    pytcodestyle $@
-else
-    pycodestyle .
+    args="$@"
 fi
+echo "pycodestyle ${args}"
+pycodestyle ${args}
